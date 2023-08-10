@@ -340,7 +340,7 @@ header
 }
 
 .header-area .main-nav .nav li:nth-child(4) a {
-  background-color: #000; /* Cambia el color de fondo a negro de la pagina de contacto */
+  background-color: #000000; /* Cambia el color de fondo a negro de la pagina de contacto */
 }
 
 .header-area .main-nav .nav li:last-child a:hover {
@@ -563,7 +563,7 @@ header
 
 .header-area.header-sticky {
   min-height: 80px;
-  background-color: #060132;
+  background-color: #000000;
 }
 
 .header-area .nav {
@@ -1270,6 +1270,9 @@ section.top-section .accordions {
   margin-left: 30px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
+
+
+
 .accordions .accordion {
   border-bottom: 1px solid #eee;
 }
@@ -1563,6 +1566,14 @@ section.map .info-item i {
   font-size: 36px;
   color: #43ba7f;
   margin-bottom: 25px;
+}
+
+.header-area .main-nav .logo img#header-logo{
+  max-height: 90px;
+  width: auto;
+  margin-left: 0px;
+  line-height: normal;
+  margin-top: 0;
 }
 
 section.map .info-item h4 {
