@@ -1106,7 +1106,7 @@ section.testimonials .section-heading {
 
 .testimonials .item {
   border-radius: 15px;
-  padding: 50px 320px 50px 50px;
+  padding: 50px 50px 50px 50px;
   background-color: #fff;
   position: relative;
   overflow: hidden;
@@ -1140,22 +1140,8 @@ section.testimonials .section-heading {
   position: relative;
 }
 
-.testimonials .item span {
-  margin-top: 5px;
-  display: block;
-  font-size: 15px;
-  font-weight: 600;
-  color: #43ba7f;
-}
 
-.testimonials .item img {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 300px;
-  border-radius: 5px;
-}
+
 
 .testimonials .owl-dots {
   text-align: center;
