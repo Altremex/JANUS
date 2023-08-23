@@ -17,26 +17,19 @@ function handleInputs() {
   calcularNivelRiesgo();
 }
 
-// Función para calcular el rendimiento anual basado en el saldo inicial
-function calcularRendimientoAnual(saldoInicial) {
-  const ranges = [
-    { min: 100000000, percentage: 4.5 },
-    { min: 500000, percentage: 2.8 },
-    { min: 250000, percentage: 2.4 },
-    { min: 100000, percentage: 2.1 },
-    { min: 70000, percentage: 1.5 },
-    { min: 40000, percentage: 1 }
-  ];
+// Función para calcular el rendimiento anual basado en el nivel de riesgo
+function calcularRendimientoAnual(saldoInicial, nivelRiesgo) {
+  const baseRendimiento = 15; // Rendimiento base sin considerar el nivel de riesgo
 
-  let rendimientoAnual = 0;
-  for (const range of ranges) {
-    if (saldoInicial >= range.min) {
-      rendimientoAnual = range.percentage;
-      break;
-    }
-  }
+  let rendimientoPorcentaje = baseRendimiento;
 
-  return rendimientoAnual;
+  if (nivelRiesgo === "Agresivo") {
+    rendimientoPorcentaje += 4;
+  } else if (nivelRiesgo === "Conservador") {
+    rendimientoPorcentaje -= 2;
+  } // No se modifica el rendimiento en caso de ser "Moderado"
+
+  return rendimientoPorcentaje;
 }
 
 // Función para calcular el interés compuesto
@@ -44,7 +37,9 @@ function calculateCompoundInterest() {
   const initialBalance = parseFloat(document.getElementById("initialBalance").value);
   const years = parseFloat(document.getElementById("plazoMeses").value) / 12;
 
-  const rendimientoAnualPorcentaje = calcularRendimientoAnual(initialBalance);
+  const nivelRiesgo = document.getElementById("nivelRiesgo").textContent;
+
+  const rendimientoAnualPorcentaje = calcularRendimientoAnual(initialBalance, nivelRiesgo);
 
   let balance = initialBalance;
 
@@ -77,4 +72,7 @@ function calcularNivelRiesgo() {
   }
 
   nivelRiesgoSpan.textContent = nivel;
+
+  // Recalcular el interés compuesto después de cambiar el nivel de riesgo
+  calculateCompoundInterest();
 }

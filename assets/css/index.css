@@ -223,9 +223,22 @@ section {
 header
 --------------------------------------------- 
 */
+
+/* Remove unnecessary styles that affect widget position */
+.tradingview-widget-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Make sure it's above other elements */
+}
+
+
+
+
 .background-header {
   background-color: #412132;
-  height: 80px!important;
+  height: 100px!important;
   position: fixed!important;
   top: 0!important;
   left: 0;
@@ -234,10 +247,10 @@ header
 }
 
 .header-area {
-  background-image: url(../images/header-bg.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 2%;
   position: absolute;
   height: 110px;
   top: 0;
@@ -256,7 +269,7 @@ header
 }
 
 .header-area .main-nav .logo {
-  line-height: 120px;
+  line-height: 130px;
   color: #fff;
   font-size: 28px;
   font-weight: 700;
@@ -562,12 +575,20 @@ header
 }
 
 .header-area.header-sticky {
-  min-height: 80px;
+  min-height: 100px;
   background-color: #000000;
 }
 
 .header-area .nav {
   margin-top: 30px;
+}
+
+
+.tradingview-widget-container {
+    display: inline-block; /* Display widget inline with header content */
+    vertical-align: top; /* Align to the top of the header */
+    width: 100%;
+    margin-bottom: 0%;
 }
 
 .header-area.header-sticky .nav li a.active {
