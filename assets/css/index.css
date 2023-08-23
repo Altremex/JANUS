@@ -227,7 +227,7 @@ header
 /* Remove unnecessary styles that affect widget position */
 .tradingview-widget-container {
   width: 100%;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 9999; /* Make sure it's above other elements */
@@ -251,7 +251,7 @@ header
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: .01em;
+  margin-top: 2em;
   position: relative;
   height: 110px;
   top: 0;
