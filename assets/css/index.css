@@ -232,11 +232,6 @@ header
   left: 0;
   z-index: 9999; /* Make sure it's above other elements */
 }
-@media (max-width: 767px) { /* Adjust this breakpoint as needed */
-  .tradingview-widget-container {
-    margin-top: 110px; /* Adjust this value based on the height of your logo container */
-  }
-}
 
 
 
@@ -256,8 +251,9 @@ header
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 2em;
+  min-height: 130px; /* Adjusted the min-height */
   position: relative;
-  height: 110px;
+  height: auto; /* Changed from fixed height to auto */
   top: 0;
   left: 0;
   right: 0;
@@ -266,7 +262,18 @@ header
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
+  padding-bottom: 20px; /* Added padding at the bottom */
 }
+
+
+/* Remove absolute positioning for the widget on mobile */
+@media (max-width: 767px) { /* Adjust this breakpoint as needed */
+  .tradingview-widget-container {
+    position: static;
+    margin-top: 20px; /* Add some space above the widget */
+  }
+}
+
 
 .header-area .main-nav {
   min-height: 80px;
