@@ -642,6 +642,16 @@ header
     margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas si es necesario */
   }
 
+  .tradingview-widget-container {
+    /* Adjust the top margin to create space for the header */
+    margin-top: 100px; /* You can adjust this value */
+  }
+
+  /* Adjust other styles for the widget as needed */
+  .fixed-tradingview-widget {
+    /* Adjust the top position if necessary */
+    top: 100px; /* You can adjust this value */
+  }
 
 
 
