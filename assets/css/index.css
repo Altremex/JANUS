@@ -225,13 +225,6 @@ header
 */
 
 /* Remove unnecessary styles that affect widget position */
-.tradingview-widget-container {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999; /* Make sure it's above other elements */
-}
 
 
 
@@ -243,21 +236,21 @@ header
   left: 0;
   right: 0;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
-  z-index: 100;
+  z-index: 1;
 }
 
 .header-area {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 2em;
-  min-height: 130px; /* Adjusted the min-height */
+  
+  min-height: 100px; /* Adjusted the min-height */
   position: relative;
   height: auto; /* Changed from fixed height to auto */
-  top: 0;
+  top: 1rem;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 2;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
@@ -265,19 +258,22 @@ header
   padding-bottom: 20px; /* Added padding at the bottom */
 }
 
-
-/* Remove absolute positioning for the widget on mobile */
-@media (max-width: 767px) { /* Adjust this breakpoint as needed */
-  .tradingview-widget-container {
-    position: static;
-    margin-top: 20px; /* Add some space above the widget */
+@media (max-width: 767px) {
+  .header-area .main-nav .logo {
+    font-size: 20px;  /* reduce the font size for mobile */
+  }
+  .header-area .main-nav .nav {
+    text-align: center; /* center the navigation on mobile */
+  }
+  .header-area .main-nav .nav li {
+    display: block; /* stack the navigation items vertically */
   }
 }
-
 
 .header-area .main-nav {
   min-height: 80px;
   background: transparent;
+  z-index: 3;
 }
 
 .header-area .main-nav .logo {
@@ -287,7 +283,7 @@ header
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  z-index: 10000;
+  z-index: 15;
   float: left;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -480,7 +476,7 @@ header
   width: 32px;
   height: 40px;
   text-indent: -9999em;
-  z-index: 99;
+  z-index: 4;
   right: 40px;
   display: none;
 }
@@ -590,7 +586,12 @@ header
 .header-area.header-sticky {
   min-height: 100px;
   background-color: #000000;
+  position: relative;
+  z-index: 6;
 }
+
+
+
 
 .header-area .nav {
   margin-top: 30px;
@@ -598,11 +599,21 @@ header
 
 
 .tradingview-widget-container {
-    display: inline-block; /* Display widget inline with header content */
-    vertical-align: top; /* Align to the top of the header */
+    position: fixed;
+    top:0;
+    left:0;
     width: 100%;
-    margin-bottom: 0%;
+    z-index: 50;
 }
+
+.fixed-tradingview-widget {
+  position: fixed;
+  top: 100px; /* Adjust this value to match the height of your sticky header */
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the widget is above other content */
+}
+
 
 .header-area.header-sticky .nav li a.active {
   color: #ff511a;
@@ -622,6 +633,19 @@ header
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
+
+
+  .header-area.header-sticky {
+    min-height: 70px; /* Ajusta la altura del encabezado para pantallas más pequeñas si es necesario */
+  }
+  .header-area .nav {
+    margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas si es necesario */
+  }
+
+
+
+
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #ff511a!important;
@@ -738,6 +762,7 @@ banner
   height: calc(100vh - 0px);
   margin: 0px;
   background-color: #212741;
+  
 }
 
 .swiper-slide {

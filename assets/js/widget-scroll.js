@@ -1,13 +1,11 @@
-// widget-scroll.js
+window.addEventListener("scroll", function () {
+  var container = document.getElementById("tradingview-widget-container");
+  var containerRect = container.getBoundingClientRect();
+  var scrollTop = window.pageYOffset;
 
-// Función para ajustar la posición del widget
-function adjustWidgetPosition() {
-    var scrollPosition = window.scrollY || window.pageYOffset;
-    var widgetContainer = document.querySelector('.tradingview-widget-container');
-    widgetContainer.style.top = scrollPosition + 'px';
+  if (scrollTop > containerRect.top) {
+    container.classList.add("fixed-tradingview-widget");
+  } else {
+    container.classList.remove("fixed-tradingview-widget");
   }
-  
-  // Llama a la función al cargar y al desplazarse
-  window.onload = adjustWidgetPosition;
-  window.onscroll = adjustWidgetPosition;
-  
+});

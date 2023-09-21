@@ -331,6 +331,10 @@ header
   transition: all .3s;
 }
 
+.header-area .main-nav .nav li:nth-child(4) a {
+  background-color: #000; /* Cambia el color de fondo a negro de la pagina de contacto */
+}
+
 .header-area .main-nav .nav li:last-child a:hover {
   color: #fff;
 }
@@ -551,7 +555,7 @@ header
 
 .header-area.header-sticky {
   min-height: 80px;
-  background-color: #000000;
+  background-color: #060132;
 }
 
 .header-area .nav {
