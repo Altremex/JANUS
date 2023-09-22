@@ -637,7 +637,7 @@ header
 
   .header-area.header-sticky {
     min-height: 70px; /* Ajusta la altura del encabezado para pantallas más pequeñas si es necesario */
-    margin-top: 50px;
+    margin-top: auto;
   }
   .header-area .nav {
     margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas si es necesario */
