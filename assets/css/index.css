@@ -644,7 +644,7 @@ header
 
   .tradingview-widget-container {
     /* Adjust the top margin to create space for the header */
-    margin-top: 100px; /* You can adjust this value */
+    margin-top: 0; /* You can adjust this value */
   }
 
   /* Adjust other styles for the widget as needed */
