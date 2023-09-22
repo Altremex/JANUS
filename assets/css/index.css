@@ -637,10 +637,14 @@ header
 
   .header-area.header-sticky {
     min-height: 70px; /* Ajusta la altura del encabezado para pantallas más pequeñas si es necesario */
-    margin-top: auto;
+    margin-top: 5px;
   }
   .header-area .nav {
     margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas si es necesario */
+  }
+
+  body {
+    margin-top: 50px; /* Adjust as needed based on your header and widget height */
   }
 
   .tradingview-widget-container {
