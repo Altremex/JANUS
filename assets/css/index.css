@@ -950,8 +950,9 @@ section.simple-cta .left-image {
 }
 
 section.simple-cta h4 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 80px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
   color: #fff;
   line-height: 50px;
 }
@@ -970,20 +971,9 @@ section.simple-cta p {
   color: #fff;
   margin-top: 30px;
   margin-bottom: 40px;
-}
-
-section.simple-cta .buttons {
-  display: flex;
-  justify-content: end;
-}
-
-section.simple-cta .buttons .orange-button {
-  margin-left: 20px;
-}
-
-section.simple-cta .buttons .orange-button,
-section.simple-cta .buttons .green-button {
-  margin-top: 25px;
+  font-family:'Karla', sans-serif;
+  font-size: 1.5rem;
+  
 }
 
 
@@ -1739,9 +1729,6 @@ body {
   }
   .simple-cta {
     text-align: center;
-  }
-  section.simple-cta .buttons {
-    justify-content: center;
   }
   section.about-us .naccs .menu div,
   section.service-details .naccs .menu div {
