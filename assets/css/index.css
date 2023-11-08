@@ -1615,12 +1615,12 @@ contact us page
 
 @media (max-width: 768px) {
   .page-heading {
-    margin-top: 60px; /* Menos espacio superior en móviles */
+    margin-top: 50px; /* Menos espacio superior en móviles */
     padding: 2em 1em; /* Ajuste de relleno para dispositivos más pequeños */
   }
 
   .page-heading .header-text h2 {
-    font-size: 20px; /* Tamaño de fuente más pequeño para dispositivos más pequeños */
+    font-size: 40px; /* Tamaño de fuente más pequeño para dispositivos más pequeños */
   }
 }
 
