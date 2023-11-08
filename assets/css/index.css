@@ -1590,9 +1590,56 @@ contact us page
 }
 
 .page-heading {
-  padding: 4em; /* Ajusta el relleno según tus preferencias */
+  padding: 2em 1em; /* Ajusta el relleno según tus preferencias */
   margin-top: 100px;
+  width: 100%;
+  text-align: center;
 }
+
+.page-heading .container {
+  width: 100%; /* Asegura que el contenedor ocupa todo el ancho */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-heading .header-text {
+  margin: 0 auto; /* Centra el texto horizontalmente */
+}
+
+
+.page-heading .div-dec {
+  margin: 0 auto; /* Asegura que la decoración también está centrada */
+}
+
+@media (max-width: 768px) {
+  .page-heading {
+    margin-top: 60px; /* Menos espacio superior en móviles */
+    padding: 2em 1em; /* Ajuste de relleno para dispositivos más pequeños */
+  }
+
+  .page-heading .header-text h2 {
+    font-size: 20px; /* Tamaño de fuente más pequeño para dispositivos más pequeños */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 section.map .info-item {
